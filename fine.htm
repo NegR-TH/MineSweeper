@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="fine.css">
+    <title>fine</title>
+</head>
+
+<body>
+    <div class="app" style="height: 100%;">
+        <div class="main_div">
+            <div class="show2"
+                style="background: linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);">
+                <canvas class="canvy" aria-hidden="true" width="153" height="120">
+                    <!-- you have to work on it -->
+                </canvas>
+                <div class="show1">
+                    <!--logo -->
+                    <div class="logoy">
+                        <div>
+                            <div class="title">MineSweeper</div>
+                        </div>
+                    </div>
+                    <!-- setting game -->
+                    <form class="formy" aria-label="game settings">
+                        <div class="sel-space">
+                            <select required class="respons-form" name="difficulty" id="dif">
+                                <option class="opt-space" id="beginer" value="bigginer">Beginner</option>
+                                <option class="opt-space" id="medum" value="medium">Medium</option>
+                                <option class="opt-space" id="exper" value="expert">Expert</option>
+                            </select>
+                            <!-- </label> -->
+                        </div>
+                        <div class="sel-space">
+                            <select class="respons-form " name="board-size" id="boar-size">
+                                <option class="opt-space" id="smal" value="small">Small</option>
+                                <option class="opt-space" id="mediumSiz" value="medium-board">Medium</option>
+                                <option class="opt-space" id="larg" value="larg">Larg</option>
+                            </select>
+                        </div>
+                        <div class="sel-space">
+                            <input class="respons-form" type="button" value="Start" id="btn">
+                        </div>
+                        <!-- <table id="cell" name="table"></table> -->
+                    </form>
+                </div>
+            </div>
+            <div class="showBoar">
+                <button class="respons-form" id="rfrshBtn">Refresh</button>
+                <p class="best-record" id="bestrec" style="visibility: hidden;"><span id="mnoBegoo"></span>
+                </p>
+                <p class="timing" id="time"></p>
+                <h5> <span>__________________________________________</span> </h5>
+                <h5 id="subtitle">...</h5>
+                <table id="cell" name="table" class="visibil-tab" style="margin-bottom: 3rem; margin: 2rem;">
+                </table>
+            </div>
+            <div class="footery" role="menubar">
+                <button class="nokhody" style="margin-right: auto !important;">
+                    <svg>
+                        <path></path>
+                    </svg>
+                </button>
+                <button class="nokhody" style="margin-left:auto!important;">
+                    <svg>
+                        <path></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="fine.js"></script>
+
+</html>

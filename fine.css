@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    background: linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+@media screen and (min-width:320px) {
+    html {
+        font-size: 1em;
+        --cell-size: 40px;
+        --cell-padding: 5px;
+        --side-margin: 24px;
+        --icon-size: 24px;
+        --circlebtn-size: 48px;
+        --bar-avoid: 78px;
+        --bar-padding: 18px;
+    }
+
+    .sel-space {
+        margin: 0.8rem calc(-1*var(--item-margin));
+    }
+}
+
+.best-record {
+    box-sizing: border-box;
+    position: absolute;
+    margin-left: -19rem;
+    margin-bottom: 3px;
+    margin-top: -1rem;
+    position: relative;
+    color: #fff;
+    font-weight: inherit;
+}
+
+.timing {
+    box-sizing: border-box;
+    margin-right: -23rem;
+    margin-bottom: -3rem;
+    margin-top: -2rem;
+    position: relative;
+    color: #fff;
+    font-weight: inherit;
+}
+
+/* .app {
+
+} */
+
+.main_div {
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+/* .show2 {
+    position: relative;
+} */
+
+.canvy,
+.show2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    aspect-ratio: auto 133 / 120;
+}
+
+.canvy {
+    animation: _2Y2ec .5s ease-in-out;
+}
+
+.footery::before {
+    content: "";
+    height: 1px;
+    transform-origin: 0 0;
+    transform: scaleY(.5);
+    position: absolute;
+    top: 0;
+    left: var(--side-margin);
+    right: var(--side-margin);
+    background: #fff;
+}
+
+.nokhody {
+    fill: #fff;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+#cell {
+    display: inline-grid;
+    padding: 10px;
+    background-color: transparent;
+    grid-template-columns: repeat(var(--size), 60px);
+    grid-template-rows: repeat(var(--size), 60px);
+    gap: 4px;
+}
+
+#cell tr td {
+    border: 1px solid black;
+    background-color: rgb(52, 15, 47);
+    color: rgb(89, 32, 51);
+    margin: 2px;
+    border-radius: 7px 2px;
+    box-shadow: 2px 3px 5px 0 black, 2px 3px 5px 0 purple;
+    padding: 6px;
+    text-align: center;
+    vertical-align: center;
+    height: 45px;
+    width: 50px;
+}
+
+#cell tr td:hover {
+    background-color: gray;
+}
+
+.visibil-tab,
+.showBoar {
+    display: flex;
+    align-items: center;
+}
+
+.showBoar {
+    visibility: hidden;
+    flex-flow: column;
+    flex: 1;
+    justify-content: space-evenly;
+    position: relative;
+    min-height: min-content;
+    padding-bottom: 3rem;
+}
+
+#subtitle {
+    /* visibility: hidden; */
+    color: rgb(145, 105, 139);
+    text-align: center;
+    font-size: 3ch;
+    max-width: 648px;
+    justify-content: center;
+    padding: 0 var(--side-margin);
+    margin-bottom: -1rem;
+    margin-top: -1rem;
+}
+
+.visibil-tab {
+    /* visibility: hidden; */
+    display: flex;
+    flex-flow: column;
+    padding: 0 var(--side-margin);
+    box-sizing: border-box;
+    width: 100%;
+    width: auto;
+    --item-margin: 0.4rem;
+}
+
+.logoy,
+.show1 ff {
+    display: flex;
+    align-items: center;
+}
+
+*>.show1 {
+    display: flex;
+    align-items: center;
+}
+
+.show1 {
+    flex-flow: column;
+    flex: 1;
+    justify-content: space-evenly;
+    position: relative;
+    min-height: min-content;
+    padding-bottom: 3rem;
+}
+
+.logoy {
+    width: 100%;
+    max-width: 648px;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 var(--side-margin);
+    margin: 2.5rem 0;
+}
+
+.formy {
+    display: flex;
+    flex-flow: column;
+    padding: 0 var(--side-margin);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 33rem;
+    --item-margin: 0.4rem;
+
+    /* background-color: transparent;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+}
+
+/* new design of hole*/
+
+.container {
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.sel-space {
+    display: flex;
+    margin: 0.4rem calc(-1*var(--item-margin));
+}
+
+.sel-space>* {
+    flex: 1;
+}
+
+.laby {
+    position: relative;
+    display: block;
+    --padding-sides: 0.9rem;
+    margin: 0 var(--item-margin);
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgb(52, 15, 47);
+}
+
+.tiny_laby {
+    position: absolute;
+    padding: 0 var(--padding-sides);
+    font-size: .8rem;
+    opacity: .7;
+    top: 0.9rem;
+    pointer-events: none;
+}
+
+.svg_laby {
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.ha,
+.la,
+.svg_laby {
+    position: absolute;
+    fill: #fff;
+    right: .6rem;
+    width: 15px;
+    height: 7px;
+    -webkit-tap-highlight-color: transparent;
+    padding: 7px
+}
+
+/* select bar */
+select {
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgb(52, 15, 47);
+    padding: 12px 20px;
+    color: plum;
+}
+
+.opt-space {
+    margin: 10px 0;
+    padding-top: 5px;
+}
+
+/* responsive form */
+
+*.respons-form {
+    box-sizing: border-box;
+}
+
+label.respons-form {
+    display: inline-block;
+    padding: 12px 12px 12px 0;
+}
+
+input[type=button].respons-form {
+    /* background-color: rgb(52, 15, 47);
+    color: plum;
+    margin: 7px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 30px; */
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgb(52, 15, 47);
+    padding: 12px 20px;
+    color: plum;
+}
+
+#rfrshBtn {
+    border: none;
+    width: 23%;
+    border-radius: 4px;
+    background-color: rgb(52, 15, 47);
+    padding: 12px 20px;
+    color: plum;
+}
+
+input[type=button].respons-form:hover {
+    background-color: rgb(145, 105, 139);
+}
+
+/* * {
+    box-sizing: border-box;
+} */
+
+body {
+    background-color: transparent;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    flex-direction: column;
+    color: palevioletred;
+}
+
+.title {
+    margin: 20px;
+    font-size: 44px;
+    color: rgb(52, 15, 47);
+    text-align: center;
+    text-shadow: 0 0 4px white;
+}
+
+
+
+/* 
+#btn {
+    background-color: rgb(52, 15, 47);
+    color: plum;
+    margin: 7px 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 30px;
+} */
